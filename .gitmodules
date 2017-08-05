@@ -28,3 +28,6 @@
 [submodule "vim/bundle/vim-fish"]
 	path = vim/bundle/vim-fish
 	url = https://github.com/dag/vim-fish
+[submodule "vim/bundle/vim-bufmru"]
+	path = vim/bundle/vim-bufmru
+	url = https://github.com/mildred/vim-bufmru
