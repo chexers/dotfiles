@@ -1,6 +1,8 @@
 filetype indent plugin on
+
 syntax on
 
+set nowrap
 set nocompatible        
 set hidden
 set history=50          

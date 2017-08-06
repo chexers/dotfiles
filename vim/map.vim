@@ -7,6 +7,8 @@ nnoremap        <leader>j         <c-w>j
 nnoremap        <leader>k         <c-w>k
 nnoremap        <leader>l         <c-w>l
 
+nnoremap        <leader>mx        :MakeExe<cr>
+
 " local leader
 nnoremap        <localleader>w    :w!<cr>
 nnoremap        <localleader>wq   :wqa!

@@ -1,13 +1,5 @@
-"""
 """ VIM master
-
-
-""   ~/.config/vim/ext.vim
-""   ~/.config/vim/env.vim
-""   ~/.config/vim/cmd.vim
-""   ~/.config/vim/fun.vim
-""   ~/.config/vim/opt.vim
-""   ~/.config/vim/map.vim
+set rtp+=~/.config/vim
 
 source ~/.config/vim/ext.vim
 source ~/.config/vim/env.vim

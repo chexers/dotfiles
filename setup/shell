@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# vi: ft=sh
+source ~/.config/setup/.lib.sh
+
+disp "Configuring shell..."
+
+function pkg {
+    sudo apt install -y $@
+}
+
+pkg git fish tmux vim &> /dev/null
+echo -e "\n-- setting shell to fish --\n"
+sudo chsh -s `which fish` `whoami`
+disp "Changed to fish shell..."
+disp " -------------------- "
