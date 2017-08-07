@@ -10,6 +10,8 @@ command! ReloadVim     source $MYVIMRC
 command! MakeExe       !chmod +x %
 command! RunExe        !bash %
 
+command! Scratch       !echo -e "#!/bin/bash\n#vi:ft=sh\\\n\\\n" > /tmp/scratch | tabedit /tmp/scratch
+
 " Auto open an close nerdtree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
