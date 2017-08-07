@@ -1,5 +1,4 @@
 filetype indent plugin on
-
 syntax on
 
 set nowrap
@@ -26,7 +25,7 @@ set autochdir
 
 " Coloring scheme
 set background=dark
-colorscheme Tomorrow-Night
+colorscheme Tomorrow-Night-Bright
 
 " set statusline=%t\ %m%r%y%=(ascii=\%03.3b,hex=\%02.2B)\ (%l/%L,%c)\ (%P)
 set statusline=%t\ %m%r%y%=[%lL.%cC]\ (%P)
@@ -49,7 +48,7 @@ let g:NERDTreeChDirMode=2
 let g:NERDTreeHighlightCursorline=1
 let g:NERDTreeHijackNetrw=1
 let g:NERDTreeRespectWildIgnore=1
-let g:NERDTreeBookmarksFile="~/.config/vim/bookmarks.txt"
+let g:NERDTreeBookmarksFile=expand('~'). "/.config/vim/bookmarks.txt"
 let g:NERDTreeQuitOnOpen=1
 let g:NERDTreeShowBookmarks=1
 let g:NERDTreeShowFiles=1

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+source ~/.config/setup.d/.lib.sh
+
+FSH=$(which fish)
+disp "Configuring shell..."
+disp "Changing default shell to $FSH"
+
+sudo chsh -s `which fish` `whoami`
+
+disp "Installing fish addon 'bass'..."
+BASS="https://github.com/edc/bass"
+DEST=/tmp/`whoami`-bass
+git clone $BASS $DEST
+pushd $DEST
+make install
+popd
+
+disp "Installing tmuxinator"
+install ruby
+gem install tmuxinator
+echo "source-file ~/.config/tmux.conf" > ~/.tmux.conf
