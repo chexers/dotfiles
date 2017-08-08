@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 source ~/.config/setup.d/.lib.sh
 
+ENV="$HOME/.config/env.sh"
+echo ". $ENV" >> $HOME/.bashrc
+disp "Added ENVIRONMENT"
+source $ENV
+
 FSH=$(which fish)
 disp "Configuring shell..."
 disp "Changing default shell to $FSH"
-
 sudo chsh -s `which fish` `whoami`
 
 disp "Installing fish addon 'bass'..."
