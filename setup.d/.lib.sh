@@ -12,4 +12,6 @@ function br {
     echo -e "\n=-=-=-=-=-=--=-=-=-=-==-\n"
 }
 
-
+function install {
+    sudo apt install -y $*
+}

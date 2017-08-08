@@ -1,5 +1,5 @@
-# vi:ft=fish
-
+#vi:ft=fish
+#
 function pkg
     sudo apt $argv
 end
@@ -21,8 +21,4 @@ end
 
 function update
     pkg update
-end
-
-function resume
-    #for line in in `cat $HOME/.config/session.state`
 end

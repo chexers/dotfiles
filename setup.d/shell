@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+source ~/.config/setup.d/.lib.sh
+
+ENV="$HOME/.config/env.sh"
+echo ". $ENV" >> $HOME/.bashrc
+disp "Added ENVIRONMENT"
+source $ENV
+
+FSH=$(which fish)
+disp "Configuring shell..."
+disp "Changing default shell to $FSH"
+sudo chsh -s `which fish` `whoami`
+
+disp "Installing fish addon 'bass'..."
+BASS="https://github.com/edc/bass"
+DEST=/tmp/`whoami`-bass
+git clone $BASS $DEST
+pushd $DEST
+make install
+popd
+
+disp "Installing tmuxinator"
+install ruby
+sudo gem install tmuxinator
+echo "source-file ~/.config/tmux.conf" > ~/.tmux.conf
+
+
+sudo gem install github
+sudo gem install defunkt/gist
