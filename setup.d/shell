@@ -21,5 +21,9 @@ popd
 
 disp "Installing tmuxinator"
 install ruby
-gem install tmuxinator
+sudo gem install tmuxinator
 echo "source-file ~/.config/tmux.conf" > ~/.tmux.conf
+
+
+sudo gem install github
+sudo gem install defunkt/gist
