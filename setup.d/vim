@@ -2,6 +2,7 @@
 # vi: ft=sh
 source ~/.config/setup.d/.lib.sh
 
+pkg vim
 
 if [ -d ~/.vim ]; then
     rm -rf ~/.vim

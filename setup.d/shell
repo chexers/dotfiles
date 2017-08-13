@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 source ~/.config/setup.d/.lib.sh
+pkg most tmux
 
 ENV="$HOME/.config/env.sh"
 echo ". $ENV" >> $HOME/.bashrc
@@ -14,7 +15,8 @@ sudo chsh -s `which fish` `whoami`
 disp "Installing fish addon 'bass'..."
 BASS="https://github.com/edc/bass"
 DEST=/tmp/`whoami`-bass
-git clone $BASS $DEST
+rm -rf $DEST/*
+github clone edc bass $DEST
 pushd $DEST
 make install
 popd
@@ -25,5 +27,17 @@ sudo gem install tmuxinator
 echo "source-file ~/.config/tmux.conf" > ~/.tmux.conf
 echo -e"\nSHELL CONFIGURED"
 
-set -xg FSH (which fish)
-echo -e "\nset-option -g default-shell \"$FSH\"" | tee -a ~/.config/tmux.conf
+FSH=`which fish`
+TC="${HOME}/.tmux.conf"
+
+if [ -f $TC ]; then
+    mv $TC "${TC}.old"
+    disp "Moved old tmux conf out the way"
+fi
+ln -s ~/.config/tmux.conf $TC
+echo -e "\nset-option -g default-shell \"$FSH\"" | tee -a $TC
+
+disp "Configured tmux"
+
+
+

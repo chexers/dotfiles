@@ -25,3 +25,6 @@
 [submodule "vim/bundle/vim-fish"]
 	path = vim/bundle/vim-fish
 	url = https://github.com/dag/vim-fish
+[submodule "fish/fish-lp"]
+	path = fish/fish-lp
+	url = https://github.com/wesbarnett/fish-lp.git

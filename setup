@@ -5,7 +5,7 @@ source ~/.config/setup.d/.lib.sh
 pushd ~/.config
 
 disp "Installing dependencies..."
-install vim tmux git ruby tree most &> /dev/null
+pkg ruby tree most &> /dev/null
 gem install github &> /dev/null
 gem install gist &> /dev/null
 
