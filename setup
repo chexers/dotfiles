@@ -5,13 +5,15 @@ source ~/.config/setup.d/.lib.sh
 pushd ~/.config
 
 disp "Installing dependencies..."
-install vim tmux git fish most &> /dev/null
+install vim tmux git ruby tree most &> /dev/null
+gem install github &> /dev/null
+gem install gist &> /dev/null
 
 for fn in ~/.config/setup.d/*; do
     NAME=$(basename $fn)
     read -p "Configure $fn? [y/N] " DOIT
     if [ "$DOIT" = "y" ]; then
-        bash $fn
+        . $fn
     fi
 done
 

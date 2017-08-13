@@ -19,11 +19,10 @@ pushd $DEST
 make install
 popd
 
-disp "Installing tmuxinator"
-install ruby
+echo "Installing tmuxinator"
+sudo apt install -y ruby
 sudo gem install tmuxinator
 echo "source-file ~/.config/tmux.conf" > ~/.tmux.conf
+echo -e"\nSHELL CONFIGURED"
 
 
-sudo gem install github
-sudo gem install defunkt/gist
