@@ -25,4 +25,5 @@ sudo gem install tmuxinator
 echo "source-file ~/.config/tmux.conf" > ~/.tmux.conf
 echo -e"\nSHELL CONFIGURED"
 
-
+set -xg FSH (which fish)
+echo -e "\nset-option -g default-shell \"$FSH\"" | tee -a ~/.config/tmux.conf
