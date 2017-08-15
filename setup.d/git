@@ -10,4 +10,8 @@ git config --global user.name "Chex Possible"
 
 gist --login
 
+pushd ~/.ssh
+~/.config/scripts/decrypt.sh ~/.config/github_keys.tar.gz.gpg
+popd
+
 echo "Git configured"
