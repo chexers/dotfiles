@@ -61,3 +61,5 @@ let g:NERDTreeCascadeSingleChildDir=1
 let g:NERDTreeCascadeOpenSingleChildDir=1
 let g:NERDTreeAutoDeleteBuffer=1 
 
+let g:airline#extensions#tabline#enabled = 1
+

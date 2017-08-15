@@ -28,3 +28,6 @@
 [submodule "fish/fish-lp"]
 	path = fish/fish-lp
 	url = https://github.com/wesbarnett/fish-lp.git
+[submodule "vim/vim-airline"]
+	path = vim/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
