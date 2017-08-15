@@ -4,3 +4,4 @@
 fish/fishd*
 fish/fish_history
 htop/*
+setup.d/.complete_*
