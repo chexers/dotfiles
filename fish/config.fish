@@ -18,7 +18,7 @@ abbr -a ifconfig sudo ifconfig
 
 set -xg EDITOR vim
 set -xg SHELL  (which fish)
-set -xg PATH $HOME/.local/bin $HOME/.gem/ruby/2.4.0/bin $PATH
+set -xg PATH $HOME/.config/scripts $HOME/.local/bin $HOME/.gem/ruby/2.4.0/bin $PATH
 set -xg fish_greeting hellomoto
 
 if status --is-interactive
