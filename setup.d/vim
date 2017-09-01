@@ -2,10 +2,14 @@
 # vi: ft=sh
 DOTFILES=~/dotfiles
 
-[ ! -d ~/.vim/bundle ] && mkdir ~/.vim/bundle
+if [ -d ~/.vim/bundle ]; then
+    rm -rf ~/.vim/bundle/*
+else
+    mkdir ~/.vim/bundle
+fi
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-MODPATH=$DOTFILES/vim/mods
+MODPATH=$DOTFILES/vim_mods
 {
     echo "set nocp"
     echo "filetype off"
@@ -17,3 +21,5 @@ MODPATH=$DOTFILES/vim/mods
     echo "call vundle#end()"
     echo "filetype plugin indent on"
 } > ~/.vimrc
+
+vim +PluginInstall +qall

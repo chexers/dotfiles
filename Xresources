@@ -1,0 +1,103 @@
+URxvt.saveLines: 2000
+URxvt.scrollBar: False
+URxvt.scrollstyle: rxvt
+URxvt.termName: xterm-256color
+URxvt.urgentOnBell: True
+URxvt.cursorBlink: True
+URxvt.perl-ext-common: default,clipboard,keyboard-select,url-select
+URxvt.urlLauncher: xdg-open
+URxvt.urlButton: 1
+URxvt.underlineURLs: True
+
+URxvt.copyCommand:  xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+
+! Keybindings
+URxvt.keysym.Mod4-c: perl:clipboard:copy
+URxvt.keysym.Mod4-v: perl:clipboard:paste
+URxvt.keysym.Mod4-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.C-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-u: perl:url-select:select_next
+
+URxvt.font: xft:Inconsolata-12
+URxvt.boldFont: xft:Inconsolata-12
+URxvt.letterSpace: -1
+
+
+! special
+URxvt.foreground:   #d7d0c7
+URxvt.background:   #151515
+URxvt.cursorColor:  #d7d0c7
+
+! black
+URxvt.color0:       #101010
+URxvt.color8:       #404040
+
+! red
+URxvt.color1:       #e84f4f
+URxvt.color9:       #d23d3d
+
+! green
+URxvt.color2:       #b8d68c
+URxvt.color10:      #a0cf5d
+
+! yellow
+URxvt.color3:       #e1aa5d
+URxvt.color11:      #f39d21
+
+! blue
+URxvt.color4:       #7dc1cf
+URxvt.color12:      #4e9fb1
+
+! magenta
+URxvt.color5:       #9b64fb
+URxvt.color13:      #8542ff
+
+! cyan
+URxvt.color6:       #6d878d
+URxvt.color14:      #42717b
+
+! white
+URxvt.color7:       #dddddd
+URxvt.color15:      #dddddd
+
+XTerm*termName: xterm-256color
+XTerm*geometry: 80x24
+XTerm*saveLines: 1024
+XTerm*scrollBar: False
+XTerm*loginshell: False
+XTerm*cursorBlink: False
+
+! Fonts and Encoding
+XTerm*utf8: True
+XTerm*locale: True
+XTerm*utf8Title: True
+XTerm*renderFont: True
+XTerm*preeditType: Root
+XTerm*xftAntialias: true
+XTerm*faceName: xft:Inconsolata-12
+
+! Trim trailing spaces
+XTerm*trimSelection: true
+
+! Fix alt-key inputting
+XTerm*eightBitInput: false
+XTerm*metaSendsEscape: true
+
+! Copy and paste with clipboard
+XTerm*translations: #override \
+	Ctrl Shift <KeyPress> C: copy-selection(CLIPBOARD) \n\
+	Ctrl Shift <KeyPress> V: insert-selection(CLIPBOARD)
+
+! Allow selecting email/url by double-click
+XTerm*charClass: 33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35:48
+
+yeahconsole*term:urxvt
+yeahconsole*restart:1
+yeahconsole*consoleHeight:20
+yeahconsole*aniDelay:8
+yeahconsole*toggleKey:Win+t
