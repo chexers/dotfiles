@@ -1,23 +1,19 @@
-#!/usr/bin/env bash
+#!/bin/bash 
 # vi: ft=sh
-source ~/.config/setup.d/.lib.sh
+DOTFILES=~/dotfiles
 
-pkg vim
+[ ! -d ~/.vim/bundle ] && mkdir ~/.vim/bundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-if [ -d ~/.vim ]; then
-    rm -rf ~/.vim
-    disp "REMOVED original ~/.vim dir"
-fi
-
-if [ -e $MYVIMRC ]; then
-    rm -rf $MYVIMRC
-    disp "REMOVED original ~/.vimrc"
-fi
-
-disp "Adding personal config to vimrc"
-echo "source ${CONF}/vim/rc.vim" > $MYVIMRC
-
-pushd ~/.config/
-disp "Cloning plugins"
-git submodule init
-git submodule update
+MODPATH=$DOTFILES/vim/mods
+{
+    echo "set nocp"
+    echo "filetype off"
+    echo "set rtp+=~/.vim/bundle/Vundle.vim"
+    echo "call vundle#begin()"
+    while read vmod; do
+        echo "Plugin '$vmod'"
+    done < $MODPATH
+    echo "call vundle#end()"
+    echo "filetype plugin indent on"
+} > ~/.vimrc

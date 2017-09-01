@@ -1,17 +1,11 @@
 #!/usr/bin/env bash
 # vi: ft=sh
-source ~/.config/setup.d/.lib.sh
+source $LIB
 
-pkg git
-disp "Installed git"
-
+[ -z `which git` ] && pkg git
 git config --global user.email "chexers.775@gmail.com"
 git config --global user.name "Chex Possible"
 
-gist --login
-
-pushd ~/.ssh
-~/.config/scripts/decrypt.sh ~/.config/github_keys.tar.gz.gpg
-popd
+[ -x gist ] && gist --login
 
 echo "Git configured"
