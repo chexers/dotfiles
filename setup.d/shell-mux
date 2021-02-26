@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-source ~/.config/setup.d/.lib.sh
-
-pkg tmux
-gem install tmuxinator
-rm -rf ~/.tmux.conf
-ln -s $HOME/.config/tmux.conf $HOME/.tmux.conf

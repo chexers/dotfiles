@@ -1,6 +1,0 @@
-#!/bin/bash
-
-QRY='install> '
-sudo apt search $* | less
-read -p $QRY TARGET
-[ ! -z $TARGET ] && install $TARGET
