@@ -18,7 +18,7 @@ echo "syntax on"                 >> $MYVIMRC
 echo "filetype plugin indent on" >> $MYVIMRC
 
 cd $LOCAL_CONF/vim/bundle
-git clone https://github.com/chexers/vimfiles.git personalcfg
+git clone git@github.com:chexers/vimfiles.git
 git clone https://github.com/chriskempson/base16-vim.git
 git clone https://github.com/scrooloose/nerdtree.git
 
