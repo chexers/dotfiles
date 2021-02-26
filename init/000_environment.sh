@@ -4,7 +4,6 @@
 
 export LOCAL_CONF="$HOME/.config/"
 
-
 #
 # User attributes
 #
